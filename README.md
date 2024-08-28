@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple Weather App that allows users to retrieve current weather information for a specific city. The application uses the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface.
+This simple Weather App allows users to retrieve current weather information for a specific city. The application uses the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface.
 
 ## Website
 
