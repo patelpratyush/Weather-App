@@ -100,30 +100,38 @@ let weather = {
           const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${this.apiKey}`;
           console.log('Fetching weather data from URL:', url);
           fetch(url)
-          .then((response) => {
-            console.log('Weather API response for location:', response);
-            if (!response.ok) {
-              alert("No weather found.");
-              throw new Error("No weather found.");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            console.log('Weather data for location:', data);
-            this.displayWeather(data);
-            this.fetchForecast(data.name); // Fetch the 5-day forecast
-          })
-          .catch((error) => console.error("Error fetching weather data for location:", error));
+            .then((response) => {
+              console.log('Weather API response for location:', response);
+              if (!response.ok) {
+                throw new Error("No weather found.");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log('Weather data for location:', data);
+              this.displayWeather(data);
+              this.fetchForecast(data.name); // Fetch the 5-day forecast
+            })
+            .catch((error) => {
+              console.error("Error fetching weather data for location:", error);
+              alert("Error fetching weather data. Please try again.");
+            });
         },
         (error) => {
           console.error("Error getting location:", error);
-          alert("Unable to retrieve your location.");
+          alert("Unable to retrieve your location. Please enable location services and try again.");
+        },
+        {
+          // Optional settings for geolocation
+          timeout: 10000, // 10 seconds timeout
+          maximumAge: 60000, // 1 minute cache
+          enableHighAccuracy: true // Try to get more accurate position
         }
       );
     } else {
       alert("Geolocation is not supported by this browser.");
     }
-  },
+  }
 };
 
 document.querySelector(".search button").addEventListener("click", function () {
