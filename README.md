@@ -21,7 +21,7 @@ This simple Weather App allows users to retrieve current weather information for
 1. Clone the repository to your local machine.
 
    ```bash
-   git clonehttps://github.com/patelpratyush/Weather-App
+   git clone https://github.com/patelpratyush/Weather-App
    ```
 
 2. Open the index.html file in your preferred web browser.
