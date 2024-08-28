@@ -1,5 +1,5 @@
 let weather = {
-  apiKey: "78125f9c7999bbf68ec61ad4869e37d9",
+  apiKey: process.env.OPENWEATHERMAP_API_KEY,
   fetchWeather: function (city) {
     console.log(`Fetching weather for city: ${city}`);
     fetch(
@@ -133,6 +133,7 @@ let weather = {
     }
   }
 };
+
 
 document.querySelector(".search button").addEventListener("click", function () {
   weather.search();
