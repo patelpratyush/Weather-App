@@ -2,7 +2,7 @@
 
 ## Overview
 
-This simple Weather App allows users to retrieve current weather information for a specific city. The application uses the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface.
+This simple Weather App allows users to retrieve current weather information and a 5-day forecast for a specific city. The application uses the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface.
 
 ## Website
 
@@ -10,9 +10,13 @@ This simple Weather App allows users to retrieve current weather information for
 
 ## Features
 
-- **Current Weather Information:** Get real-time weather updates including temperature, humidity, wind speed, and weather description.
+- **Current Weather Information:** Get real-time weather updates, including temperature, humidity, wind speed, and weather description.
+
+- **5-Day Forecast:** View a 5-day weather forecast with temperature, weather conditions, and icons representing the forecast.
 
 - **Dynamic Background:** The application dynamically updates the background image based on the searched city, providing a visually appealing experience.
+
+- **Geolocation Support:** The app can automatically fetch the weather data based on the user's current location.
 
 - **Responsive Design:** The app is designed to be responsive and works well on various screen sizes.
 
@@ -24,24 +28,56 @@ This simple Weather App allows users to retrieve current weather information for
    git clone https://github.com/patelpratyush/Weather-App
    ```
 
-2. Open the index.html file in your preferred web browser.
+2. Navigate to the project directory and open the **index.html** file in your preferred web browser.
 
-3. Enter the name of the city in the search bar.
+3. Enter the name of the city in the search bar and press the **"Search"** button or hit **"Enter"** to fetch the weather information for the entered city.
 
-4. Press the "Search" button or hit "Enter" to fetch the weather information for the entered city.
+4. Alternatively, click the location button to get weather information for your current location automatically.
 
 ## Project Structure
 
-- index.html: The main HTML file that contains the structure of the application.
+- index.html: The main HTML file containing the application's structure.
 
 - style.css: The stylesheet that defines the app's visual style and layout.
 
-- script.js: The JavaScript file containing the Weather App logic, including the API integration and DOM manipulation.
+- script.js: The JavaScript file containing the Weather App logic, including the API integration, DOM manipulation, and geolocation features.
 
 ## Dependencies
 
-- OpenWeatherMap API: The app uses the OpenWeatherMap API to retrieve weather data. Make sure to replace the apiKey in the weather object with your own API key.
+- OpenWeatherMap API: The app uses the OpenWeatherMap API to retrieve weather and forecast data. Make sure to replace the **apiKey** in the weather object with your own API key.
 
-## Contributions
+## Project Structure
 
-- Contributions to the project are welcome. Feel free to submit issues or pull requests to improve the application.
+```plaintext
+.
+├── README.md
+├── index.html
+├── script.js
+└── style.css
+```
+
+
+## Contributing
+
+We welcome contributions from the community! To contribute:
+
+1. **Fork the repository**
+2. **Create a new branch**
+
+   ```bash
+   git checkout -b feature-your-feature-name
+   ```
+
+3. **Make your changes and commit them**
+
+   ```bash
+   git commit -m "Add your message here"
+   ```
+
+4. **Push to the branch**
+
+   ```bash
+   git push origin feature-your-feature-name
+   ```
+
+5. **Open a Pull Request**: We will review your changes and merge them into the main branch.
