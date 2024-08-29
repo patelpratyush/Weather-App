@@ -1,5 +1,5 @@
 let weather = {
-  apiKey: process.env.OPENWEATHERMAP_API_KEY,
+  apiKey: "78125f9c7999bbf68ec61ad4869e37d9",
   fetchWeather: function (city) {
     console.log(`Fetching weather for city: ${city}`);
     fetch(
